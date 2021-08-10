@@ -1,0 +1,6 @@
+https://www.w3schools.com/tags/tag_doctype.asp
+
+
+https://developer.mozilla.org/pt-BR/
+
+Colocar scripts de JavaScript no Head OU depois do body

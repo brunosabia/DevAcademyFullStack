@@ -1,0 +1,29 @@
+Elemento de Bloco ocupa 100% da largura do site
+ou seja, qualquer não deixam espaço lateral para outro elemento ao lado.
+exemplo de elemento de bloco:
+<div>
+
+Elemento de Linha ocupa apenas o tamanho base do conteúdo que ele carrega, deixando espaço na horizontal.
+Pulando pra outra linha automaticamente
+exemplo de elemento de linha:
+<strong>
+<span>
+
+
+propriedade display do CSS ajuda a alterar a disposição do elemento específico.
+com valores:
+block, inline, inline-block e none.
+
+
+
+atalho pra iniciar um documento HTML:
+! + enter
+
+e existe o "lorem"+ enter para popular algum conteudo de texto
+
+<br> quebra a linha
+
+
+
+UM H1 POR DOCUMENTO HTML
+
