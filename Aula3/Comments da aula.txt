@@ -1,0 +1,70 @@
+propriedades de background-image: url('')
+
+background-size:cover;
+
+o menu é um caractér "burguer" ☰ e é um <button>
+
+
+
+FLEX BOX!
+
+https://flexboxfroggy.com/
+
+por padrão os elementos filho vão tentar entrar na MESMA LINHA.
+flex-wrap colocado no container-pai, significa que é permitido quebrar a linha quando nao couber mais.
+
+container-pai
+elementos filhos
+
+.container-pai{
+	display: flex; /*ativa o flexbox*/
+	flex-wrap: wrap;
+}
+
+
+/* posicionar  */
+justify-content:
+flex-start
+flex-end
+center
+space-between
+space-around
+
+
+/*posicionar vertical*/
+align-items:
+flex-start
+flex-end
+center
+baseline
+stretch
+
+/*alinhar conteúdo*/
+align-content:
+flex-start
+flex-end
+center
+space-between
+space-around
+stretch
+
+
+/*direção da lista*/
+
+/*row é da esquerda pra direita*/
+flex-direction:row
+flex-direction:row-reverse
+
+/*column é de cima pra baixo*/
+flex-direction:column
+flex-direction:column-reverse
+
+/*wraps*/
+flex-wrap:
+wrap
+nowrap
+wrap-reverse
+
+flex-flow:
+row wrap
+column wrap

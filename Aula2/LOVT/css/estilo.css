@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
+
 body {
     background-color:#E5E5E5;
+    /*reset css do navegador*/
+    margin:0;
+    padding:0;
+    /* configs normais*/
     font-family: Ropa Sans;
     font-weight: 500;
     margin-left: auto;
     margin-right: auto;
-    width: 50em;
+    width: 60em;
 }
 main{
     background-color:#FFFFFF;
@@ -16,19 +21,32 @@ header{
     padding:10px;
     box-shadow: 0px 2px 10px 0px #00000040;
 }
+
+#logo{
+    margin-left: 35px;
+}
+#menuimage{
+    float: right;
+    margin:5px 15px 20px 0px;
+}
+
+#middle{
+    width:1000px;
+    max-width:100%;
+    text-align: center;
+}
+
+
 #carrossel{
     margin-bottom:35px;
     text-align: center;
 }
 #carrossel img{
-    width: 1000px;
+    width: 1200px;
     max-width: 90%;
     margin: 0 auto;
 }
-#sales{
-    text-align: center;
-    margin:0 44px;
-}
+
 
 #sales div{
     background-color:#EEEEEE;
@@ -37,27 +55,59 @@ header{
     width: 256px;
     max-width: 100%;
     padding: 0;
-    margin:0 40px;
+    
 }
 
 #sales div img{
     width: 256px;
-    max-width:100%
+    max-width:100%;
+    margin: 0 auto;
 }
 
 #content{
     text-align: center;
     margin: 50px auto;
 }
+
+#content h2{
+    font-weight: 400;
+    font-size:25px;
+    color:#888888;
+}
+
 footer{
     background-color: #333333;
     text-align: center;
-    margin: 40px auto;
+    margin: 30px auto;
 }
 
 footer div{
+    font-weight: 400;
+    font-size: 12px;
+    color :#FFFFFF;
     display: inline-block;
     width: 45%;
-    margin: 25px auto;
+    margin: 22px auto;
+}
+
+footer div img{
+    margin: 0 auto;
+}
+
+footer div a{
+    text-decoration: none !important;
+    color: inherit;
+    padding:7px;
+}
+
+footer div #contacts{
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2.0;
+}
+
+footer div p{
+    line-height: 2.0;
+    margin: 0 auto;
 }
 
