@@ -1,0 +1,33 @@
+Responsividade das telas
+
+viewport:
+a tag<meta name="viewport" content="width=device-width,initial-scale=1">
+
+media query é uma forma de reorganizar o conteudo dependendo das condições de visualização:
+
+(no caso abaixo, todos os dispositivos com mais de 768 width e nao estiverem em landscape nao irão pegar essas configs)
+@media(max-width: 768px) and(orientation: landscape){
+	body{
+		background: red;
+	}
+}
+
+no fim do css normalmente:
+
+@media(min-width:460px){
+	/*Tablets*/
+}
+
+
+@media(min-width:768px){
+	/*Laptops*/
+}
+
+VIEWPORT:
+VW: VIEWPORT WIDTH
+VH: VIEWPORT HEIGHT
+
+div{
+	width:25vw; /*irá ocupar 25% da tela horizontal*/
+	height:50vh; /*irá ocupar 50% da tela vertical*/
+}
