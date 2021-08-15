@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+/* seletor coringa*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* tipografia padrão da pagina */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #777777;
+    /* reset css do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+
+header {
+    box-shadow: 0px 1px 20px rgba(139, 139, 139, 0.65);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .container .logo {
+    padding-top: 5px;
+    width: 209px;
+
+}
+
+header .container nav.navbar a {
+    text-decoration: none;
+    color: #777777;
+    font-weight: 600;
+    padding: 20px;
+}
+
+/*banner*/
+
+.main .container .banner img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/*style*/
+
+.main h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    color: #000000;
+    margin: 70px;
+}
+
+.main .style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 100px;
+}
+
+.main .style .photo2 img,
+.main .style .photo1 img{
+    max-width: 100%;
+}
+
+/*Promos*/
+
+section.promo .container {
+    background-color: #C2185B;
+    max-width: 100%;
+    padding: 35px 30px 35px 30px;
+}
+
+section.promo .container h3 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin: 0;
+    margin-bottom: 35px;
+    color: #fff;
+}
+
+section.promo .container .promoItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+section.promo .container .promoItems .item {
+    background-color: #fff;
+
+}
+
+section.promo .container .promoItems .item h4 {
+    color: #000;
+    margin: 1px;
+    padding-left: 6px;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+section.promo .container .promoItems .item p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    padding-left: 6px;
+    padding-bottom: 1.2rem;
+}
+
+/*Highlight*/
+
+section.highlight .box {
+    margin: 80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+section.highlight .container .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section.highlight .container .details .text {
+    margin-bottom: 10px;
+}
+
+section.highlight .container .details .text h3 {
+    margin-top: 0;
+    ;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #000000;
+}
+
+section.highlight .container .details .text button {
+    border: 0;
+    text-align: center;
+    padding: 25px 95px;
+    font-size: 2.2rem;
+    font-weight: 400;
+    background-color: #C2185B;
+    color: #fff;
+}
+
+section.highlight .container .details .close img {
+    max-width: 100%;
+}
+
+section.highlight .container .box .full img {
+    max-width: 100%;
+}
+
+
+/*footer*/
+footer {
+    background-color: #C2185B;
+
+}
+
+footer .container {
+    padding-bottom: 30px;
+    color: #fff;
+}
+
+footer .container .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .container .info .description {
+    margin-top: 10px;
+}
+
+
+footer .container .info p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+footer .container .info .category,
+footer .container .info .institutional {
+    font-size: 0.9rem;
+}
+
+footer .container .info .institutional a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .container .info .category h2,
+footer .container .info .institutional h2 {
+
+    font-weight: 700;
+    margin: 35px 0 15px 0;
+}
+
+
+/*Work with Us*/
+
+/*form*/
+section.box .title h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin: 40px 0 0 70px;
+    ;
+
+}
+
+section.box .main {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin: 55px;
+    gap: 105px;
+}
+
+section.box .main .form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+section.box .main .form .data {
+    line-height: 1.8;
+    color: #777777;
+}
+
+section.box .main .form .data input {
+    color: #777777;
+    border: 1px solid #9B9B9B;
+    height: 26px;
+    width: 100%;
+    max-width: 100%;
+}
+
+section.box .main .form .available {
+    margin: 15px 0;
+    color: #777777;
+}
+
+section.box .main .form .available label,
+section.box .main .form .contacts label {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #777777;
+    font-weight: normal;
+}
+
+section.box .main .form .available input {
+    color: #777777;
+}
+
+section.box .main .form .available h4,
+section.box .main .form .contacts h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 15px;
+    margin: 0;
+}
+
+section.box .main .form .contacts {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 15px;
+    color: #777777;
+}
+
+section.box .main .form h4 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 10px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+section.box .main .form textarea {
+    width: 100%;
+    color: #777777;
+    margin: 0;
+    border: 1px solid #777777;
+}
+
+section.box .main .form .attach {
+    margin: 15px 0;
+}
+
+section.box .main .form .attach button {
+    margin-left: 10px;
+    background-color: #C4C4C4;
+    padding: 3px 25px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+section.box .main .form .buttonsubmit button {
+    background-color: #C2185B;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    border: 0;
+    cursor: pointer;
+}
+
+
+section.box .main .text {
+    width: 538px;
+    max-width: 100%;
+    max-width: 100%;
+}
+
+section.box .main .text p {
+    margin: 0;
+    margin-bottom: 15px;
+}
