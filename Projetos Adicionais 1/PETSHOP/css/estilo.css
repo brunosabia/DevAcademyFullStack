@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* tipografia padrão da pagina */
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    /* reset css do navegador */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*header*/
+header {
+    width: 100%;
+    max-width: 100%;
+    background-color: #FFBE51;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+header .container .logo img {
+    width: 253px;
+    max-width: 100%;
+}
+
+header .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+header .container .navbar a {
+    text-decoration: none;
+    padding: 50px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/*main*/
+
+section.main .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 50px 0;
+    margin-bottom: 85px;
+    gap: 60px;
+    width: 100%;
+}
+
+section.main .container .text {
+    width: 560px;
+    max-width: 100%;
+}
+
+section.main .container .image img {
+    width: 560px;
+    max-width: 100%;
+}
+
+section.main .container .text h1 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #757575;
+}
+
+section.main .container .text h2 {
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 37px;
+    color: #757575;
+}
+
+section.main .container .text p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #757575;
+}
+
+
+
+/*services*/
+section.services {
+    text-align: center;
+    background-color: #E5E5E5;
+    padding: 50px 0;
+}
+
+section.services h2 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+}
+
+section.services .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.services .container h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 34px;
+}
+
+section.services .container img {
+    width: 266px;
+    max-width: 100%;
+    background-color: #fff;
+}
+
+/*Services description*/
+section.serviceList h1 {
+    text-align: center;
+    color: #FFBE51;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    margin: 70px 0;
+}
+
+section.serviceList hr {
+    background-color: #C4C4C4;
+}
+
+section.serviceList .container {
+    display: flex;
+    flex-direction: column;
+}
+
+section.serviceList .container .item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px 0 70px 0;
+}
+
+section.serviceList .container .item .description {
+    width: 537px;
+    max-width: 100%;
+
+}
+
+section.serviceList .container .item .description .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.serviceList .container .item .description .price h2 {
+    margin: 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    text-transform: uppercase;
+}
+
+section.serviceList .container .item .description .price h3 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    color: #000000;
+}
+
+section.serviceList .container .item .button button {
+    background-color: #FFC107;
+    border: 0;
+    color: white;
+    padding: 10px 80px;
+    font-size: 16px;
+    font-weight: 800;
+
+}
+
+
+section.serviceList .container .item p {
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #757575;
+}
+
+/*grey separator*/
+section.serviceList .grey {
+    margin: 60px 150px;
+    height: 5px;
+    max-width: 100%;
+    background-color: #c4c4c4;
+}
+
+/*Contact*/
+section.box .container .title h1 {
+    color: #FFBE51;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 55px;
+    margin: 70px 13%;
+}
+
+section.box .container .main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.box .container .main .text {
+    width: 480px;
+    max-width: 100%;
+}
+
+section.box .container .main .text .contact .links {
+    margin: 20px;
+    max-width: 100%;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+
+section.box .container .main .text .contact .links a {
+    text-decoration: none;
+    max-width: 100%;
+    color: #000000;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+section.box .container .main .text .map iframe {
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    width: 533px;
+    max-width: 100%;
+    height: 202px;
+}
+
+/*Contact form*/
+section.box .container .main .form .data input {
+    width: 100%;
+    max-width: 100%;
+    height: 32px;
+    margin: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: lowercase;
+    border: 1px solid #686868;
+    box-sizing: border-box;
+}
+
+section.box .container .main .form .data textarea {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: lowercase;
+    border: 1px solid #686868;
+    box-sizing: border-box;
+}
+
+section.box .container .main .form button {
+    width: 100%;
+    max-width: 100%;
+    height: 32px;
+    border: 0;
+    background-color: #FFC107;
+    margin: 0 10px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+
+}
+
+
+/*footer*/
+footer.lastFooter {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #C4C4C4;
+    padding: 35px;
+}
+
+
+footer {
+    margin-top: 20px;
+    background-color: #FFBE51;
+    padding-top: 35px;
+}
+
+footer .info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .info .contact {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+footer .info .links {
+    padding-top: 30px;
+}
+
+footer .info .links a {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer .container .info iframe {
+    border: 3px solid #FFFFFF;
+    width: 436px;
+    max-width: 100%;
+    height: 207px;
+}
+
+footer .end {
+
+    max-width: 100%;
+    height: 50px;
+    background-color: #C4C4C4;
+}
