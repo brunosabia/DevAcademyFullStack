@@ -1,0 +1,30 @@
+O NODE É ONDE NÓS RODAMOS JAVASCRIPT
+
+https://www.typescriptlang.org/
+
+instalando o COMPILADOR DE TYPESCRIPT:
+criar um projeto node no terminal na pasta do projeto:
+npm init -y
+depois instalar finalmente o compilador typescript:
+npm install typescript --save-dev 
+
+
+ESSE COMPILADOR SÓ SERÁ NECESSÁRIO PARA O DESENVOLVIMENTO
+
+a pasta node_modules (NÃO PRECISA SER MOVIMENTADA COM O PROJETO)
+o proprio pacote de compilador
+
+package-lock.json traz uma lista de todos os pacotes instalados.
+o package-json mostra os pacotes instalados e suas versões aceitáveis.
+
+
+TYPESCRIPT
+um filhote do javaScript, que supera o javaScript em alguns aspectos.
+mais rigoroso que o js
+o typescript, quando enviado para o navegador é traduzido para js. pois os navegadores atualmente só aceitam:
+	html
+	CSS
+	JS
+é utilizado em angular!
+
+angular.io

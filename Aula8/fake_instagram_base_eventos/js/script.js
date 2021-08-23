@@ -22,12 +22,12 @@ btnHeart.onclick = (event) => {
     if (btnHeart.getAttribute('src') == "img/icons/heart.svg") {
 
         btnHeart.src = "img/red-heart.png";
-        
+        btnHeart.nextElementSibling.innerHTML = '1 like'
 
     } else {
         btnHeart.src = "img/icons/heart.svg";
         
-        
+        btnHeart.nextElementSibling.innerHTML = '0 like'
     }
 }
 
@@ -38,6 +38,7 @@ search.onmouseover = (event) => {
 search.onmouseleave = (event) => {
     search.style.cssText = "box-shadow:0px;";
 }
+
 
 //ex 4
 btnMore.onmouseover = (event) => {
