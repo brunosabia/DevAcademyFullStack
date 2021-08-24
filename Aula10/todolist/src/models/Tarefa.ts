@@ -27,7 +27,20 @@ export class Tarefa{
                     </td>
                     <td>
                     <i class="material-icons">delete</i>
-                    </td>`
+                    </td>`;
+
+                    //marcando/desmarcando  uma tarefa como feita
+                    let checkbox = tr.querySelector('input');
+                    checkbox.addEventListener("click",()=>{
+                        this.feita = checkbox.checked;
+                        tr.className = this.feita?"done":"";
+                    });
+
+                    // let bt = tr.querySelector('i');
+                    // bt.addEventListener('click',()=>{
+                    //     tr.remove();
+                    // })
+                    
                     return tr;
     }
     

@@ -2,48 +2,9 @@
 import "./style.css";
 import "material-icons/iconfont/material-icons.css";
 import { Tarefa, prioridade } from "./models/Tarefa";
+import { ListaDeTarefas } from "./models/ListaDeTarefas";
 
-
-
-let t1 = new Tarefa("Pagar boletos", prioridade.alta);
-let t2 = new Tarefa("Tomar banho", prioridade.alta);
-let t3 = new Tarefa("Teste", prioridade.baixa);
-
-t1.imprimir();
-t2.imprimir();
-
-let tarefas: Tarefa[] = [t1, t2, t3];
-
-
-
-function exibirTarefas(tarefas: Tarefa[]): void {
-    let tabela: HTMLTableElement = <HTMLTableElement>document.querySelector('table');
-    
-    for (const tarefa of tarefas) {
-        tabela.appendChild(tarefa.toRow());
-    }
-
-}
-
-
-document.querySelector("#form").addEventListener('submit', (evt) => {
-
-    //interrompe o envio do form
-    evt.preventDefault();
-    tarefas = [];
-    let input = document.querySelector('input').value;
-    //criar nova tarefa com os dados do form e prioridade baixa
-    let taref = new Tarefa(input, prioridade.baixa);
-    //adicionar a tarefa criada ao array tarefas
-    tarefas.push(taref);
-    //executar a exibirTarefas(tarefas)
-    exibirTarefas(tarefas);
-})
-
-exibirTarefas(tarefas);
-console.log(tarefas);
-
-
+const lt : ListaDeTarefas = new ListaDeTarefas(document.querySelector("main"));
 
 //window.alert("Turma boa retada!")
 
