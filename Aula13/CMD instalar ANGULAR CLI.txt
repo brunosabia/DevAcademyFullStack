@@ -1,0 +1,13 @@
+npm install -g @angular/cli
+
+
+PARA TESTAR:
+DIGITE NO POWERSHELL do vsCode:
+ng --version
+
+
+
+
+CASO DE ERRO, no powershell como administrador:
+set-executionPolicy unrestricted
+A
