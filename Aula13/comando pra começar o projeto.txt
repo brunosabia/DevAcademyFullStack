@@ -1,1 +1,13 @@
 ng new contatos
+
+e na pasta criada "contatos" no caso, utilizar o
+npm start
+
+
+na pasta raiz "contatos", no terminal:
+ng generate component components/Contato
+
+que significa:
+ng generate component lugar/nomeComponente 
+
+caso criou um component errado, precisa apagar no app.module.ts além de apagar a pasta do component criado
