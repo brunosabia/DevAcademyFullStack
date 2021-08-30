@@ -1,0 +1,18 @@
+table{
+	width: 100%;
+	table-layout:fixed;
+	border-collapse: collapse;
+}
+
+table input[type=checkbox]{
+	cursor: pointer;
+}
+
+table i{
+	cursor: pointer;
+	opacity: .8;
+}
+
+table i:hover{
+	opacity: 1;
+}

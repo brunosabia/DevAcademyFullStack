@@ -1,0 +1,41 @@
+
+tr{
+	display: inline
+	
+}
+
+td{
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	width:100%;
+	padding: 10px ;
+}
+
+tr:hover td{
+	background-color: rgba(255,255,255,.1);
+}
+
+
+td:nth-child(1){
+	width: 24px;
+}
+
+td:nth-child(3){
+	width: 72px;
+	font-size: 12px;
+	text-align: center;
+}
+
+td:nth-child(2){
+	cursor: default;
+}
+
+td:nth-child(4){
+	width: 36px;
+	padding-bottom: 0px;
+}
+
+tr.done td:nth-child(2){
+	text-decoration: line-through;
+}
+
+
