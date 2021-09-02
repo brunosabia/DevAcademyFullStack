@@ -1,0 +1,2 @@
+Mensagens de git log mais bonitas!
+https://coderwall.com/p/euwpig/a-better-git-log
