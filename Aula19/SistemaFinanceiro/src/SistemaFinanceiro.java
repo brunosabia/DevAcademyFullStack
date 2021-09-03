@@ -1,16 +1,20 @@
-import sun.text.bidi.BidiRun;
-
 public class SistemaFinanceiro {
 
-    public static void main(String[] args){
-        Cliente clientex = new Cliente();
-        clientex.setNome(null);
-        clientex.setSobrenome("de Tal");
 
-        Conta contax = new Conta(clientex);
-        System.out.println(contax.getNumero());
-        System.out.println(contax.getSaldo());
-        System.out.println(contax.getTitular().getNome());
-        System.out.println(contax.getTitular().getSobrenome());
+    public static void main(String[] args) {
+        Cliente destinatario = new Cliente();
+        destinatario.setNome("João");
+        destinatario.setSobrenome("Da Silva");
+        Conta contaDestino = new ContaCorrente(destinatario);
+
+        CaixaEletronico caixa = new CaixaEletronico();
+        caixa.autenticar("2");
+        caixa.efetuarSaque(200);
+        caixa.exibirSaldo();
+        caixa.encerrar();
+        caixa.efetuarTransferencia(contaDestino, 40);
+        caixa.exibirSaldo();
+
     }
+
 }
