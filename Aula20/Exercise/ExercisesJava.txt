@@ -1,0 +1,17 @@
+01-https://github.com/brunosabia/DevAcademyFullStack/tree/master/Aula20/Exercise/src
+
+02- Um construtor de uma classe é o método que será executado quando a classe for instanciada, definindo valores iniciais e pode receber parâmetros ou não, dependendo de sobrecargas para ter opções de inicialização de atributos.
+
+03-Não, não irá funcionar pois a variável 'estaAtivado' não existe na classe Carro.
+
+04-Os métodos utilizados para obter e configurar os dados durante o processo de encapsulamento são os Getters e os Setters, respectivamente.
+
+05-O termo void utilizado em declarações de método significam que o método não irá retornar nada. O comando return será marcado como um erro caso seja inserido em um método void.
+
+06-Gosto de utilizar comentários apenas com comentários chave. Não gosto de um código muito comentado pois em vez de me ajudar, acaba me confundindo.
+
+07- A palavra extends foi utilizada pois a classe 'esportivoDeLuxo' herda a classe 'Carro'. 
+
+08-Esta afirmação é falsa. A programação orientação de objetos tem como base a modularização de códigos que seriam repetidos para que eles possam ser reaproveitados sempre que necessário.
+
+09-https://github.com/brunosabia/DevAcademyFullStack/tree/master/Aula20/Exercise/src

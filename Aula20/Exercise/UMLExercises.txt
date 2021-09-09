@@ -1,0 +1,15 @@
+01- A definição de UML é Unified Modeling Language
+
+02-UMLExercise2.drawio.html
+
+03-Não! Associação por agregação significa que a classe apontada apenas agrega valor a classe origem, já a composição informa que a classe origem NECESSITA de uma classe apontada para existir por completo.
+
+04-Não, pois é uma linguagem padronizada e utilizada para entendimento comum entre várias pessoas envolvidas em um projeto. Não faz sentido utilizar formas aleatórias em uma linguagem que já possui um entendimento estabilizado.
+
+05-Para mim, pelo menos, acho imprescindivel um planejamento que esclareca o processo todo de desenvolvimento de um projeto JAVA. É necessario estabelecer os objetivos que serão atingidos para começar a trilhar o caminho do projeto. Além de facilitar o ententimento de todos para projetos em equipe.
+
+06- O '+' e '-' utilizados proximo aos atributos significam que eles seram publicos ou privados, respectivamente falando. Além de '#' ser o simbolo de protected.
+
+07-Sim, eu particularmente gosto de criar nomes de métodos e variáveis em inglês, já possuo uma compreensão do idioma e existem métodos e comandos do código que são padronizados ao inglês, como métodos 'get','set','public','class'... entre outros e acho que faz sentido seguir este padrão.
+
+08-Acredito que o UML é parte da documentação do projeto todo. Até porque existem vários diagramas dentro do UML que podem sequenciar implementações ou modularizar um projeto todo.
