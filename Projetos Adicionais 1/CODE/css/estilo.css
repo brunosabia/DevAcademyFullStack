@@ -1,5 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+@keyframes fromTheBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+        
+    }
+    to {
+        opacity: 1;
+        transform: translate(100);
+    }
+}
+
+@keyframes fromTheSide {
+    from {
+        opacity: 0;
+        transform: translate(-100%);
+        
+    }
+    to {
+        opacity: 1;
+        transform: translate();
+    }
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -29,6 +54,7 @@
     transition: box-shadow 0.3s;
 
 }
+
 
 .sec .dot:active {
     /*on hold*/
@@ -100,16 +126,16 @@
 
 }
 
-body img#arrow{
+body img#arrow {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
     right: 0;
     opacity: 0.7;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    height:8vh;
+    height: 8vh;
     cursor: pointer;
     user-select: none;
 }
@@ -118,56 +144,66 @@ body img#arrow{
 
 
 
- .sec nav.items{
-     width: 6vw;
-     height: 100vh;
-     margin:auto;
-     text-align: center;
-     box-shadow: 10px 10px 8px #888888;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
+.sec nav.items {
+    width: 6vw;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0px 0px 110px #888888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation:fromTheSide 1.0s;
 
- }
+}
 
- .sec nav.items ul{
-     list-style-type: none;
-     
- }
- .sec nav.items ul li{
-    margin:30px 0;
- }
+.sec nav.items ul {
+    list-style-type: none;
 
- .container{
-     display:flex;
-     justify-content: center;
-     text-align: center;
-     gap:50px;
-     width: 100%;
-     max-width: 100%;
+}
 
- }
-
- .container .text{
-     width: 500px;
-     max-width: 100%;
-     margin-right: 15px;
- }
-
- .container .pic img{
-     width: 450px;
-     max-width:100%;
-     border-radius: 5px;
- }
- .container .text h1{
-     font-size:40px;
-     margin: 15px;
- }
-
- .container .text p{
-     font-size:22px;
- }
+.sec nav.items ul li {
+    margin: 85px 0;
+}
 
 
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 100%;
+
+}
+
+.container .text {
+    width: 500px;
+    max-width: 100%;
+    margin-right: 15px;
+    user-select: none; 
+}
+
+section.sec.active {
+    color: #fff;
+    background-color:#000;
+}
 
 
+.container .pic img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 50%;
+    animation:fromTheBottom 1.5s;
+}
+
+.container .text h1 {
+    font-size: 40px;
+    margin: 15px;
+    animation:fromTheBottom 2.0s;
+}
+
+.container .text p {
+    font-size: 22px;
+    animation:fromTheBottom 2.0s;
+}
