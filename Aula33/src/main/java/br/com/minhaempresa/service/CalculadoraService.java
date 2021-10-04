@@ -3,8 +3,9 @@ import br.com.minhaempresa.domain.Operacao;
 
 public class CalculadoraService {
 
-    public double calcular(double operandoA, double operandoB, Operacao operacao){
+    public double calcular(double operandoA, double operandoB, Operacao operacao) throws IllegalArgumentException{
         double resultado = 0;
+
         switch(operacao){
             case SOMA:{resultado = somar(operandoA,operandoB);break;}
             case SUBTRACAO:{resultado = subtrair(operandoA,operandoB);break;}
@@ -27,7 +28,10 @@ public class CalculadoraService {
         return operandoA * operandoB;
     }
 
-    private double dividir(double operandoA, double operandoB){
+    private double dividir(double operandoA, double operandoB) throws IllegalArgumentException{
+        if(operandoB <= 0){
+            throw new IllegalArgumentException("divisor nao pode ser zero!");
+        }
         return operandoA / operandoB;
     }
 }

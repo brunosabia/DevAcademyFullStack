@@ -14,12 +14,23 @@ import java.io.IOException;
 public class CalculadoraController extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        double operandoA = Double.valueOf(req.getParameter("operandoA"));
-        double operandoB = Double.valueOf(req.getParameter("operandoB"));
-        double resultado = 0;
-        int operador = Integer.valueOf(req.getParameter("operador"));
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException,NumberFormatException {
 
+        double operandoA = 0;
+        double operandoB = 0;
+        double resultado = 0;
+        int operador = 0;
+
+        try {
+
+        operandoA= Double.valueOf(req.getParameter("operandoA"));
+        operandoB = Double.valueOf(req.getParameter("operandoB"));
+        operador = Integer.valueOf(req.getParameter("operador"));
+
+        }catch (NumberFormatException e){
+            resp.getWriter().println("Input invalido!");
+        }
+        resultado = 0;
         CalculadoraService calculadoraService = new CalculadoraService();
 
         Operacao operacao = null;
@@ -29,15 +40,23 @@ public class CalculadoraController extends HttpServlet {
             case 1:{operacao = Operacao.SUBTRACAO;break;}
             case 2:{operacao = Operacao.MULTIPLICACAO;break;}
             case 3:{operacao = Operacao.DIVISAO;break;}
-            default:{}
+            default:{
+                resp.getWriter().println("Operacao invalida!");
+            }
         }
-        resultado = calculadoraService.calcular(operandoA,operandoB,operacao);
-        resp.getWriter().println(resultado);
+        try {
+            resultado = calculadoraService.calcular(operandoA, operandoB, operacao);
+            resp.getWriter().println(resultado);
+        }catch (IllegalArgumentException e){
+            resp.getWriter().println(e.getMessage());
+        }
+
 
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("Servlet no ar");
+       resp.getWriter().println("Servlet no ar");
+
     }
 }
