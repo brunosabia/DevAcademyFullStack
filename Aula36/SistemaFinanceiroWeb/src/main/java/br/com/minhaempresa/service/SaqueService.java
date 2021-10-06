@@ -3,17 +3,13 @@ package br.com.minhaempresa.service;
 import br.com.minhaempresa.domain.Cliente;
 import br.com.minhaempresa.domain.Conta;
 import br.com.minhaempresa.domain.ContaCorrente;
-import br.com.minhaempresa.repository.ContaRepository;
+import br.com.minhaempresa.exception.SaldoInsuficienteException;
 
-public class ConsultaSaldoService {
+public class SaqueService {
 
-    public double consultarSaldo(String nome, String sobrenome) {
+    public void sacar(String nome, String sobrenome, double valor) throws SaldoInsuficienteException {
         Cliente cliente = new Cliente(nome, sobrenome);
         Conta conta = new ContaCorrente(cliente);
-
-        ContaRepository contaRepository = new ContaRepository();
-
-        return contaRepository.consultarSaldo();
+        conta.sacar(valor);
     }
-
 }

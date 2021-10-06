@@ -1,0 +1,28 @@
+<main>
+  <div>
+    <input type="number" name="a" id="a" [(ngModel)]="operandoA">
+  </div>
+
+  <div>
+    <select name="operador" id="operador" [(ngModel)]="operador">
+      <option value="0">+</option>
+      <option value="1">-</option>
+      <option value="2">x</option>
+      <option value="3">/</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="number" name="b" id="b" [(ngModel)]="operandoB">
+  </div>
+
+  <div>
+  <button (click)="calcular()">Calcular!</button><br>
+
+  
+    {{operandoA + operandoB}}<br>
+    {{operandoA - operandoB}}<br>
+    {{operandoA * operandoB}}<br>
+    {{operandoA / operandoB}}<br>
+  </div>
+</main>
