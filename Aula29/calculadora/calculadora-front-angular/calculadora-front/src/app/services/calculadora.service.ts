@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class CalculadoraService {
 
-  constructor(private http:HttpClient) { 
+  constructor(private httpClient:HttpClient) { 
 
   }
 
@@ -19,7 +19,7 @@ export class CalculadoraService {
     params.append('operandoB',b);
     params.append('operador',o);
 
-    return this.http.post('http://localhost:8080/Calculadora/calcular',
+    return this.httpClient.post('http://localhost:8080/Calculadora/calcular',
     params,
     {headers});
   }
