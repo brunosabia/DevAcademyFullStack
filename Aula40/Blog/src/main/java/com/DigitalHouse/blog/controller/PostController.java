@@ -4,6 +4,7 @@ import com.DigitalHouse.blog.model.Postagem;
 import com.DigitalHouse.blog.repository.PostagemRepository;
 import org.aspectj.apache.bcel.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,7 +55,23 @@ public class PostController {
     public ResponseEntity <List<Postagem>> getByTexto(@PathVariable String texto){
         //atenção no PathVariable, não pode esquece
 
-        return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(texto));
+        return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
+    }
+
+    @PostMapping
+    public ResponseEntity<Postagem> createPostagem(@RequestBody Postagem postagem){
+        return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
+    }
+
+
+    @PutMapping
+    public ResponseEntity<Postagem> putPostagem(@RequestBody Postagem postagem){
+        return ResponseEntity.status(HttpStatus.OK).body(repository.save(postagem));
+    }
+
+    @DeleteMapping("/{id}")  //o uso desta annotation é muito proximo da annotation GET
+    public void deletePostagem(@PathVariable Long id){
+        repository.deleteById(id);
     }
 
 }
