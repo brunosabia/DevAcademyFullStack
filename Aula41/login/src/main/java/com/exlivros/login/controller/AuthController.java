@@ -1,11 +1,12 @@
 package com.exlivros.login.controller;
 
+import com.exlivros.login.credentials.AccountCredentialsVO;
 import com.exlivros.login.jwt.JwtTokenProvider;
-import com.exlivros.login.model.User;
 import com.exlivros.login.repository.UserRepository;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -14,6 +15,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,7 +39,7 @@ public class AuthController {
     @SuppressWarnings("rawtypes")
     @PostMapping(value = "/signin", produces = { "application/json" },
             consumes = { "application/json"})
-    public ResponseEntity signin(@RequestBody User data) {
+    public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
         try {
             var username = data.getUsername();
             var pasword = data.getPassword();
@@ -63,10 +65,9 @@ public class AuthController {
         }
     }
 
-    @GetMapping(value = "/teste")
-    public String teste(@RequestBody User data) {
-        String teste = "Aqui foi!";
-        return teste;
+    @GetMapping(value = "/getString", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Map getString() {
+        return Collections.singletonMap("response", "Hello World");
     }
 
 

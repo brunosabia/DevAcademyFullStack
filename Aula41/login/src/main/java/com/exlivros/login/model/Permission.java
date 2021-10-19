@@ -17,7 +17,7 @@ public class Permission implements GrantedAuthority, Serializable {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "description")
+    @Column(name = "description",nullable = false,length = 20)
     private String description;
 
     @Override

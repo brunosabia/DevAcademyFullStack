@@ -50,10 +50,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- for Security support -->
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<!-- for Tokens support -->
 		<dependency>
@@ -61,19 +61,29 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
-		<!-- for OPEN API support -->
+
+		<!-- for Swagger support -->
 		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.4.6</version>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-boot-starter</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 
-		<!-- for Migrations support
+		<!-- for Migrations support-->
 		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>-->
-	</dependencies>
+    <groupId>org.flywaydb</groupId>
+    	<artifactId>flyway-core</artifactId>
+    	<version>8.0.1</version>
+	</dependency>
+
+		<!-- for Model Mapper support -->
+		<dependency>
+			<groupId>com.github.dozermapper</groupId>
+			<artifactId>dozer-core</artifactId>
+			<version>6.4.1</version>
+		</dependency>
+
+    </dependencies>
 
 	<build>
 		<plugins>
