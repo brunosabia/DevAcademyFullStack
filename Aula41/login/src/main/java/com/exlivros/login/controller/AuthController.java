@@ -2,12 +2,10 @@ package com.exlivros.login.controller;
 
 import com.exlivros.login.credentials.AccountCredentialsVO;
 import com.exlivros.login.jwt.JwtTokenProvider;
+import com.exlivros.login.model.User;
 import com.exlivros.login.repository.UserRepository;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -16,8 +14,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.springframework.http.ResponseEntity.ok;
@@ -36,16 +34,16 @@ public class AuthController {
     @Autowired
     UserRepository repository;
 
-    @ApiOperation(value = "Authenticates a user and returns a token")
+
     @SuppressWarnings("rawtypes")
-    @PostMapping(value = "/signin", produces = { "application/json" },
-            consumes = { "application/json"})
+    @PostMapping(value = "/signin", produces = { "application/json", "application/xml", "application/x-yaml" },
+            consumes = { "application/json", "application/xml", "application/x-yaml" })
     public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
         try {
             var username = data.getUsername();
-            var password = data.getPassword();
+            var pswd = data.getPassword();
 
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, pswd));
 
             var user = repository.findByUsername(username);
 
@@ -66,5 +64,9 @@ public class AuthController {
         }
     }
 
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return repository.findAll();
+    }
 
 }

@@ -3,6 +3,7 @@ package com.exlivros.login.credentials;
 import java.io.Serializable;
 import java.util.Objects;
 
+
 public class AccountCredentialsVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,7 +20,7 @@ public class AccountCredentialsVO implements Serializable {
     }
 
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     public void setPassword(String password) {
