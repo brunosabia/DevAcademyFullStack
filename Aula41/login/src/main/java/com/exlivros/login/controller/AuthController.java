@@ -3,6 +3,7 @@ package com.exlivros.login.controller;
 import com.exlivros.login.credentials.AccountCredentialsVO;
 import com.exlivros.login.jwt.JwtTokenProvider;
 import com.exlivros.login.repository.UserRepository;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,16 +36,16 @@ public class AuthController {
     @Autowired
     UserRepository repository;
 
-    @Operation(summary = "Authenticates a user and returns a token")
+    @ApiOperation(value = "Authenticates a user and returns a token")
     @SuppressWarnings("rawtypes")
     @PostMapping(value = "/signin", produces = { "application/json" },
             consumes = { "application/json"})
     public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
         try {
             var username = data.getUsername();
-            var pasword = data.getPassword();
+            var password = data.getPassword();
 
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, pasword));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
 
             var user = repository.findByUsername(username);
 
@@ -63,11 +64,6 @@ public class AuthController {
         } catch (AuthenticationException e) {
             throw new BadCredentialsException("Invalid username/password supplied!");
         }
-    }
-
-    @GetMapping(value = "/getString", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Map getString() {
-        return Collections.singletonMap("response", "Hello World");
     }
 
 
