@@ -1,7 +1,10 @@
-package br.com.erudio.exception.handler;
+package com.exlivraria.exlivraria.exception.handler;
 
 import java.util.Date;
 
+import com.exlivraria.exlivraria.exception.ExceptionResponse;
+import com.exlivraria.exlivraria.exception.InvalidJwtAuthenticationException;
+import com.exlivraria.exlivraria.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -10,9 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.erudio.exception.ExceptionResponse;
-import br.com.erudio.exception.InvalidJwtAuthenticationException;
-import br.com.erudio.exception.ResourceNotFoundException;
 
 @ControllerAdvice
 @RestController

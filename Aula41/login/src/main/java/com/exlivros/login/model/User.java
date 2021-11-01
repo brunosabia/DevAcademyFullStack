@@ -27,7 +27,7 @@ public class User implements UserDetails, Serializable {
     @Column(name = "full_name")
     private String fullName;
 
-    @Column(name = "pswd")
+    @Column(name = "password")
     private String password;
 
     @Column(name = "account_non_expired")

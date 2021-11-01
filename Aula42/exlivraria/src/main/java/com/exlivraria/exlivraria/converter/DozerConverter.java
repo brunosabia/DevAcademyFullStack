@@ -1,4 +1,4 @@
-package br.com.erudio.converter;
+package com.exlivraria.exlivraria.converter;
 
 import java.util.ArrayList;
 import java.util.List;

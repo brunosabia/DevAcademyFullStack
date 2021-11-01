@@ -1,10 +1,15 @@
 package com.exlivros.login.controller;
 
+import static org.springframework.http.ResponseEntity.ok;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.exlivros.login.credentials.AccountCredentialsVO;
 import com.exlivros.login.jwt.JwtTokenProvider;
 import com.exlivros.login.model.User;
 import com.exlivros.login.repository.UserRepository;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -14,11 +19,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import static org.springframework.http.ResponseEntity.ok;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "AuthenticationEndpoint")
 @RestController
@@ -34,16 +37,16 @@ public class AuthController {
     @Autowired
     UserRepository repository;
 
-
+    @Operation(summary = "Authenticates a user and returns a token")
     @SuppressWarnings("rawtypes")
     @PostMapping(value = "/signin", produces = { "application/json", "application/xml", "application/x-yaml" },
             consumes = { "application/json", "application/xml", "application/x-yaml" })
     public ResponseEntity signin(@RequestBody AccountCredentialsVO data) {
         try {
             var username = data.getUsername();
-            var pswd = data.getPassword();
+            var pasword = data.getPassword();
 
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, pswd));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, pasword));
 
             var user = repository.findByUsername(username);
 

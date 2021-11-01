@@ -1,4 +1,4 @@
-package br.com.erudio.security;
+package com.exlivraria.exlivraria.security;
 
 import java.io.Serializable;
 

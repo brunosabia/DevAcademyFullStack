@@ -1,4 +1,4 @@
-package br.com.erudio.security.jwt;
+package com.exlivraria.exlivraria.security.jwt;
 
 import java.io.IOException;
 

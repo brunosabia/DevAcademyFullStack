@@ -1,10 +1,13 @@
-package br.com.erudio.controller;
+package com.exlivraria.exlivraria.controller;
 
 import static org.springframework.http.ResponseEntity.ok;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.exlivraria.exlivraria.repository.UserRepository;
+import com.exlivraria.exlivraria.security.AccountCredentialsVO;
+import com.exlivraria.exlivraria.security.jwt.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -17,9 +20,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.erudio.repository.UserRepository;
-import br.com.erudio.security.AccountCredentialsVO;
-import br.com.erudio.security.jwt.JwtTokenProvider;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 

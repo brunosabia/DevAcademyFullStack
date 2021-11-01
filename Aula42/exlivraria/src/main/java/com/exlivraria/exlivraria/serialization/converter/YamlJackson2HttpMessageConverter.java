@@ -1,4 +1,4 @@
-package br.com.erudio.serialization.converter;
+package com.exlivraria.exlivraria.serialization.converter;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter;

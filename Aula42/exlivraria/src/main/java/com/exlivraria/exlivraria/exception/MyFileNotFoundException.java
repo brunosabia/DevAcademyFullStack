@@ -1,4 +1,4 @@
-package br.com.erudio.exception;
+package com.exlivraria.exlivraria.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

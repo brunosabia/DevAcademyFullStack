@@ -1,0 +1,12 @@
+{
+  "accountNonExpired": true,
+  "accountNonLocked": true,
+  "credentialsNonExpired": true,
+  "email": "teste@email.com",
+  "enabled": true,
+  "name": "Teste",
+  "password": "admin",
+  "surname": "Testado",
+  "userName": "teste",
+  "username": "teste"
+}

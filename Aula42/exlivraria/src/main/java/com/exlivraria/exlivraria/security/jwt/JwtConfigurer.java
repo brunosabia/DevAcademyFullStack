@@ -1,4 +1,4 @@
-package br.com.erudio.security.jwt;
+package com.exlivraria.exlivraria.security.jwt;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
